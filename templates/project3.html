@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Reinforcr - Stuart Bladon{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h2>Reinforcr</h2>
+    <p>Reinforcr began as an idea to use the principles of reinforcement learning to help humans learn better habits. It has since evolved into a project helping people to understand patterns in their habits using data visualization.</p>
+    <p>Below are some early-stage screenshots. At the moment, I'm using red and green dots on the map to try and spot patterns of where good vs. bad habits take place. All data and subsequent modeling is on-device for privacy.</p>
+    
+    <!-- Adding images -->
+    <img src="{{ url_for('static', filename='images/screenshot1.PNG') }}" alt="Early stage screenshot 1" style="width:100%; max-width:500px; margin-top:20px;">
+    <img src="{{ url_for('static', filename='images/screenshot2.PNG') }}" alt="Early stage screenshot 2" style="width:100%; max-width:500px; margin-top:20px;">
+</div>
+{% endblock %}

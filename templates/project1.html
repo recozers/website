@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Sommeli-AI - Stuart Bladon{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h2>Using XAI to Find the Best Wine</h2>
+    <p>AI has typically been used for things that don't matter, like predicting the weather or the advancement of medical science. Why not use these techniques to find something really important, like what makes a good glass of wine. I hope everyone notes the sarcastic tone.</p>
+    <p>Obviously, when designing this project, interpretability was absolutely paramount. What's the point in predicting the quality of a wine if you can't understand why, so you can sound intelligent to your friends? I utilized the imodels package, which is an excellent collection of interpretable models. The data was sourced from Kaggle. You can view this project <a href="https://github.com/recozers/Wine_Quality_interpretableML/tree/main" target="_blank">here</a>.</p>
+    <p>You can also find some visualizations of the algorithms used. Now next time you're at a dinner party you can gently sip the wine and complain its volatile acidity isn't between 0.59 and 0.63.</p>
+</div>
+{% endblock %}

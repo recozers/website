@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Stuart Bladon{% endblock %}
+
+{% block content %}
+<div class="projects-grid">
+    <a href="{{ url_for('project1') }}" class="project-box">Sommeli-AI</a>
+    <a href="{{ url_for('project2') }}" class="project-box">Adversarial Espionage</a>
+    <a href="{{ url_for('project3') }}" class="project-box">Reinforcr</a>
+    <a href="{{ url_for('project4') }}" class="project-box">2020 Election</a>
+    <a href="{{ url_for('project5') }}" class="project-box">Depth of Anaesthesia</a>
+    <a href="{{ url_for('project6') }}" class="project-box">FutureFrac</a>
+</div>
+{% endblock %}

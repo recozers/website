@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Stuart Bladon{% endblock %}</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Layout */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Centered Layout for Home Page */
+        .centered-layout h1, .centered-layout nav, .centered-layout .content {
+            margin-bottom: 20px;
+        }
+
+        /* Top-Aligned Title and Nav for Other Pages */
+        .top-layout .top-title {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .top-layout .top-nav {
+            position: fixed;
+            top: 50px; /* Positioned below the title */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .top-layout .content {
+            padding-top: 130px; /* Space for fixed title and nav */
+        }
+
+        /* Navigation Links */
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav a + a {
+            margin-left: 15px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+            gap: 20px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Project Boxes */
+        .project-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 90px; /* Larger padding for bigger boxes */
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.8rem; /* Larger font size */
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-container {
+            max-width: 800px; /* Limits the width to make it look more centered */
+            padding: 20px; /* Adds padding around the content */
+            margin: 0 auto; /* Centers the container */
+            line-height: 1.6; /* Improves readability */
+        }
+
+        /* Image row styling */
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for images displayed side by side */
+        .side-image {
+            width: 48%; /* Ensures images are side by side with a bit of space between */
+            border-radius: 8px;
+        }
+
+        /* Mobile View (Single-column List) */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr; /* Single column for mobile */
+                width: 100%; /* Full width on mobile */
+            }
+
+            .project-box {
+                padding: 40px; /* Smaller padding for mobile */
+            }
+        }
+
+    </style>
+</head>
+<body class="{% if is_home %}centered-layout{% else %}top-layout{% endif %}">
+
+    <!-- Conditional Title Layout -->
+    <h1 class="{% if not is_home %}top-title{% endif %}">Stuart Bladon</h1>
+
+    <!-- Conditional Navigation Layout -->
+    <nav class="{% if is_home %}centered-nav{% else %}top-nav{% endif %}">
+        <a href="/">Home</a>
+        <a href="/sport">Sport</a>
+        <a href="/projects">Projects</a>
+        <a href="/education">Education</a>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

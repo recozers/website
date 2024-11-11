@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Sport - Stuart Bladon{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <p>My earliest memory comes from when I was around 4 years old. I know from my parents that I started playing rugby at the same age. That means I literally cannot remember a time when I wasn’t playing sport. Sport took me across the Atlantic to Boston University, where I competed in the Decathlon. I now compete in the ACC for Duke University in the same event. I think of Decathlon as the ultimate problem to solve. Given my constraints of time in the week, energy, physical makeup, how do I maximize my overall athleticism?</p>
+    
+    <!-- Adding links above the images -->
+    <p style="margin-top: 20px;">
+        You can view my athletic profiles here:
+        <a href="https://www.tfrrs.org/athletes/8326757/Boston_U/Stuart_Bladon.html" target="_blank">TFRRS</a> |
+        <a href="https://www.thepowerof10.info/athletes/profile.aspx?athleteid=598098" target="_blank">PowerOf10</a>
+    </p>
+
+    <!-- Adding images at the bottom -->
+    <img src="{{ url_for('static', filename='images/head.jpeg') }}" alt="Sport image 1" style="width:100%; max-width:500px; margin-top:20px;">
+    <img src="{{ url_for('static', filename='images/run.PNG') }}" alt="Sport image 2" style="width:100%; max-width:500px; margin-top:20px;">
+    <img src="{{ url_for('static', filename='images/vault.jpg') }}" alt="Sport image 1" style="width:100%; max-width:500px; margin-top:20px;">
+    <img src="{{ url_for('static', filename='images/england.jpg') }}" alt="Sport image 2" style="width:100%; max-width:500px; margin-top:20px;">
+</div>
+{% endblock %}

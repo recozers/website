@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Education - Stuart Bladon{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <!-- Images at the top, displayed side by side -->
+    <div class="image-row">
+        <img src="{{ url_for('static', filename='images/boston.png') }}" alt="Education image 1" class="side-image">
+        <img src="{{ url_for('static', filename='images/duke.png') }}" alt="Education image 2" class="side-image">
+    </div>
+    
+    <p>Here’s a list of majors I’ve been officially enrolled in at some point:</p>
+    <ul>
+        <li>Business Management</li>
+        <li>Economics</li>
+        <li>Neuroscience</li>
+        <li>Computer Science</li>
+        <li>Political Science</li>
+    </ul>
+    <p>
+        I eventually settled on a double major in Economics and Neuroscience with a minor in Political Science, graduating with a 3.83 GPA. I then took a sharp pivot and applied to master’s programs in AI, eventually deciding on Duke University.
+    </p>
+    <p>The brain is the original Neural Network, and I still find myself using it as a framework for problem solving to this day. During my neuroscience studies I had a fascination with sleep and its effect on learning and memory. I think machines need to learn to mimic sleep to close the gap between themselves and humans in the learning domain.</p>
+    <p>Economics isn't a subject, its a way of thinking. You should thoroughly investigate incentive mechanisms, analyze data carefully for confounding variables, and rely on data, not heuristics. I find this mindset invaluable in the domain of data science and machine learning.</p>
+</div>
+{% endblock %}
