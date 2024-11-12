@@ -45,3 +45,6 @@ def project6():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+# ChatGPT4o was used to help with some of the html/css 
