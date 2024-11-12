@@ -62,22 +62,27 @@
         }
 
         /* Navigation Links */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adds spacing between buttons */
+            margin-top: 20px;
+        }
+
         nav a {
             text-decoration: none;
             color: #333;
             font-size: 1.2rem;
             padding: 10px 20px;
             border-radius: 5px;
+            background-color: #fff;
             transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav a:hover {
             background-color: #333;
             color: #fff;
-        }
-
-        nav a + a {
-            margin-left: 15px;
         }
 
         /* Projects Grid */
@@ -131,7 +136,7 @@
             border-radius: 8px;
         }
 
-        /* Mobile View (Single-column List) */
+        /* Mobile View */
         @media (max-width: 768px) {
             .projects-grid {
                 grid-template-columns: 1fr; /* Single column for mobile */
@@ -142,7 +147,6 @@
                 padding: 40px; /* Smaller padding for mobile */
             }
         }
-
     </style>
 </head>
 <body class="{% if is_home %}centered-layout{% else %}top-layout{% endif %}">
